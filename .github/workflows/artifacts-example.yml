@@ -45,4 +45,8 @@ jobs:
         uses: ./.github/actions/example
         with:
           artifact-name: ${{ needs.example-artifacts-job-1.outputs.output_test_example }}
+          
+  example-ssh-job-3:
+    name: SSH into a container with tmate
+    uses: mxschmitt/action-tmate@v3
   
