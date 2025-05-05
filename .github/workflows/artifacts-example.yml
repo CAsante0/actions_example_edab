@@ -38,6 +38,9 @@ jobs:
     needs: example-artifacts-job-1
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Use custom composite action
         uses: ./.github/actions/example
         with:
