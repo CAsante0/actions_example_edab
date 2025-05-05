@@ -24,7 +24,7 @@ jobs:
       run: echo "The secret value is ${{ secrets.MY_SECRET }}"
 
     - name: Save user input to output.txt
-      run: echo "${{ github.event.inputs.username }}" > output_test.txt
+      run: echo "this is the example-artifacts-job-1" > output_test.txt
 
     - name: Upload output.txt as artifact
       uses: actions/upload-artifact@v4
