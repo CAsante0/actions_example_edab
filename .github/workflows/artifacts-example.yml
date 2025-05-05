@@ -31,7 +31,10 @@ jobs:
       with:
         name: output_test_example
         path: output_test.txt
-
+  example-ssh-job-3:
+    step: 
+    - name: SSH into a container with tmate
+      uses: mxschmitt/action-tmate@v3
 # This calls the composite action and appends to the original output_test file
   example-artifacts-job-2:
     name: Modify file using composite action
@@ -46,7 +49,4 @@ jobs:
         with:
           artifact-name: ${{ needs.example-artifacts-job-1.outputs.output_test_example }}
           
-  example-ssh-job-3:
-    name: SSH into a container with tmate
-    uses: mxschmitt/action-tmate@v3
-  
+
