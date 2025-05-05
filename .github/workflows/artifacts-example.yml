@@ -32,6 +32,7 @@ jobs:
         name: output_test_example
         path: output_test.txt
   example-ssh-job-3:
+    runs-on: ubuntu-latest
     steps: 
     - name: SSH into a container with tmate
       uses: mxschmitt/action-tmate@v3
